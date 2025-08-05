@@ -1,0 +1,32 @@
+plugins {
+    id 'eclipse'
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+group = 'org.ta4j'
+version = '0.16-SNAPSHOT'
+java.sourceCompatibility = JavaVersion.VERSION_11
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}
+
+
+dependencies {
+    api project(':ta4j-core')
+    api group: 'com.opencsv', name: 'opencsv', version: '5.7.1'
+    api group: 'org.jfree', name: 'jfreechart', version: '1.5.3'
+    api group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.5'
+    api group: 'com.google.code.gson', name: 'gson', version: '2.10'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+}
+
+description = 'Ta4j Examples'

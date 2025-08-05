@@ -1,0 +1,2 @@
+include ":ta4j-core"
+project(":ta4j-core").projectDir = file("../ta4j-core")
