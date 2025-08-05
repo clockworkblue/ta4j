@@ -115,6 +115,22 @@ public class BaseTradingRecord implements TradingRecord {
         this(tradeType, new ZeroCostModel(), new ZeroCostModel());
     }
 
+    public BaseTradingRecord(
+            String name,
+            TradeType entryTradeType,
+            CostModel transactionCostModel,
+            CostModel holdingCostModel) {
+
+        this(
+                entryTradeType,
+                null,
+                null,
+                transactionCostModel,
+                holdingCostModel);
+
+        this.name = name;
+    }
+
     /**
      * Constructor.
      *
