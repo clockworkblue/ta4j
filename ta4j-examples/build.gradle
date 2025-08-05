@@ -19,6 +19,11 @@ tasks.withType(Javadoc) {
     options.encoding = 'UTF-8'
 }
 
+test {
+    onlyIf {
+        project.hasProperty("ta4jTests")
+    }
+}
 
 dependencies {
     api project(':ta4j-core')
