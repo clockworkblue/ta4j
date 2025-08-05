@@ -9,7 +9,6 @@ repositories {
 
 group = 'org.ta4j'
 version = '0.16-SNAPSHOT'
-java.sourceCompatibility = JavaVersion.VERSION_11
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
