@@ -32,8 +32,8 @@ dependencies {
     testImplementation (group: 'org.apache.poi', name: 'poi', version: '5.2.3') {
         exclude group: 'org.apache.logging.log4j', module: 'log4j-api'
     }
-    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.23.1'
-    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.5'
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.23.1'
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j2-impl', version: '2.23.1'
 }
 
 description = 'Ta4j Core'
